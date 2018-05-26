@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49290C22-E16C-46E7-B24E-86004576EEBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InventoryManagment</RootNamespace>
+    <AssemblyName>InventoryManagment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\..\..\MetroModernUI\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\..\..\MetroModernUI\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\..\..\MetroModernUI\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLASS_CATEGORY.cs" />
+    <Compile Include="BL\CLASS_ETAT.cs" />
+    <Compile Include="BL\CLASS_HELPER.cs" />
+    <Compile Include="BL\CLASS_INVOICE.cs" />
+    <Compile Include="BL\CLASS_MARQUE.cs" />
+    <Compile Include="BL\CLASS_PRODUCTS.cs" />
+    <Compile Include="BL\CLASS_SUPPLIERS.cs" />
+    <Compile Include="BL\CLASS_USERS.cs" />
+    <Compile Include="BL\LoginClass.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_AddNewProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_AddNewProducts.Designer.cs">
+      <DependentUpon>Form_AddNewProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_AddNewUser.Designer.cs">
+      <DependentUpon>Form_AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Backup.Designer.cs">
+      <DependentUpon>Form_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_BrandManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_BrandManagment.Designer.cs">
+      <DependentUpon>Form_BrandManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Category.Designer.cs">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_CategoryManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_CategoryManagment.Designer.cs">
+      <DependentUpon>Form_CategoryManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_DisplayImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_DisplayImage.Designer.cs">
+      <DependentUpon>Form_DisplayImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Etat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Etat.Designer.cs">
+      <DependentUpon>Form_Etat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_EtatManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_EtatManagment.Designer.cs">
+      <DependentUpon>Form_EtatManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Facture_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Facture_Management.Designer.cs">
+      <DependentUpon>Form_Facture_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_GridProductsSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_GridProductsSuppliers.Designer.cs">
+      <DependentUpon>Form_GridProductsSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FORM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FORM_LOGIN.Designer.cs">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Marque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Marque.Designer.cs">
+      <DependentUpon>Form_Marque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_NewPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_NewPurchase.Designer.cs">
+      <DependentUpon>Form_NewPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_ProductsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_ProductsManagement.Designer.cs">
+      <DependentUpon>Form_ProductsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_RestoreBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_RestoreBackup.Designer.cs">
+      <DependentUpon>Form_RestoreBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_SupplierManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_SupplierManagment.Designer.cs">
+      <DependentUpon>Form_SupplierManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_usersManangment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_usersManangment.Designer.cs">
+      <DependentUpon>Form_usersManangment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT\FORM_RPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FORM_RPT.Designer.cs">
+      <DependentUpon>FORM_RPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\Print_SelectedInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Print_SelectedInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\Products_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\SelectedProduct_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectedProduct_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="PL\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_AddNewProducts.resx">
+      <DependentUpon>Form_AddNewProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_AddNewUser.resx">
+      <DependentUpon>Form_AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Backup.resx">
+      <DependentUpon>Form_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_BrandManagment.resx">
+      <DependentUpon>Form_BrandManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Category.resx">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_CategoryManagment.resx">
+      <DependentUpon>Form_CategoryManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_DisplayImage.resx">
+      <DependentUpon>Form_DisplayImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Etat.resx">
+      <DependentUpon>Form_Etat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_EtatManagment.resx">
+      <DependentUpon>Form_EtatManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Facture_Management.resx">
+      <DependentUpon>Form_Facture_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_GridProductsSuppliers.resx">
+      <DependentUpon>Form_GridProductsSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FORM_LOGIN.resx">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Marque.resx">
+      <DependentUpon>Form_Marque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_NewPurchase.resx">
+      <DependentUpon>Form_NewPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_ProductsManagement.resx">
+      <DependentUpon>Form_ProductsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_RestoreBackup.resx">
+      <DependentUpon>Form_RestoreBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_SupplierManagment.resx">
+      <DependentUpon>Form_SupplierManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_usersManangment.resx">
+      <DependentUpon>Form_usersManangment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FORM_RPT.resx">
+      <DependentUpon>FORM_RPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\Print_SelectedInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Print_SelectedInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\Products_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Products_RPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\SelectedProduct_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SelectedProduct_RPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.user.minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.database.sql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.cabinet.files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
